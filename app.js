@@ -23,3 +23,9 @@ menu_item.forEach((item) => {
 		mobile_menu.classList.toggle('active');
 	});
 });
+module.exports = async function (context, req) {
+    context.res = {
+        status: 200,
+        body: "Hello from the dummy function!",
+    };
+};
