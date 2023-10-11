@@ -239,6 +239,24 @@
           <a href="https://www.linkedin.com/in/shaikh-musaif-0186811b1/"><img src="https://img.icons8.com/bubbles/2x/linkedin.png" /></a>
         </div>
   </section>
+<h1>Welcome to My Dummy Function Page</h1>
+    <p>This page includes a dummy Azure Function.</p>
+
+    <button id="triggerFunction">Click to Trigger the Function</button>
+
+    <script>
+        document.getElementById("triggerFunction").addEventListener("click", function () {
+            fetch("/api/app.js", {
+                method: "POST",
+            })
+                .then(function (response) {
+                    return response.text();
+                })
+                .then(function (data) {
+                    alert(data);
+                });
+        });
+    </script>
   <!-- End Footer -->
   <script src="./app.js"></script>
 </body>
